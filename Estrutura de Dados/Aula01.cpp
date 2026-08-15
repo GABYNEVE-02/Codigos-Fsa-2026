@@ -1,34 +1,40 @@
 #include <iostream>
 #include <cstring>
+#include <locale>
 
 
 class Item {
     public:
         Item(const char *s = "", int i = 0, double d = 1) {
-            std::strcpy(dataAttribute1,s);
-            dataAttribute2 = i;
-            dataAttribute3 = d;
+            std::strcpy(Nome,s);
+            Idade = i;
+            Dinheiro = d;
         }
-        void method1() {
-            std::cout << dataAttribute1 << ' ' << dataAttribute2 << ' ' << dataAttribute3 << std::endl;
+        void Indentificar() {
+            std::cout << "O nome é:" << Nome << std::endl;
+            std::cout << "A idade é:" << Idade << std::endl;
+            std::cout << "O dinheiro é:" << Dinheiro << std::endl;
         }
         void method2(int i, const char *s = "unknown") {
-            dataAttribute2 = i;
+            Idade = i;
             std::cout << i << " received from " << s << std::endl;
         }
 
     protected:
-        char dataAttribute1[20];
-        int dataAttribute2;
-        double dataAttribute3;
+        char Nome[20];
+        int Idade;
+        double Dinheiro;
 };
 
 
 int main() {
-    Item obj1("Senhor Pink",100,2000), obj2("Senhor Bronw",200,3000), obj3("Senhor White",300,4000);
+
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+
+    Item obj1("Senhor Pink",34,2000), obj2("Senhor Bronw",41,3000), obj3("Senhor White",40,4000);
 
 
-    obj1.method1();
+    obj1.Indentificar();
 
 
     obj1.method2(123);
