@@ -6,8 +6,6 @@ class Item {
         T storage[50];
 };
 
-
-
 int main() {
 
     Item<int> intObj;
@@ -18,12 +16,6 @@ int main() {
 
     std::cout << intObj.storage[1] << std::endl;
     std::cout << floatObj.storage[1] << std::endl;
-
-
-
-
-
-
 
     return 0;
 }
