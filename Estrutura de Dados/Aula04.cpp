@@ -33,13 +33,24 @@ class Estudante : virtual public Humano
         }
 };
 
+class Professor : virtual public Humano
+{
+    public:
+        void Ensinar()
+        {
+            std::cout << "O Profesor esta dando aula" << std::endl;
+        }
+};
+
 int main() {
 
-    Estudante estudante ;
+    Estudante estudante;
+    Professor Professor;
 
     estudante.Comer();
     estudante.Andar();
     estudante.Falar();
+    Professor.Ensinar();
     estudante.Estudar();
 
     return 0;
