@@ -1,8 +1,8 @@
 #Atividade 1 - Orientação a objetos
 #ContaBancaria
-#Gabrriel Andrade de Oliveira - 763094
+#Gabriel Andrade de Oliveira - 763094
 #Marina Apostolo de Oliveira - 764018
-#Gustavi Marchi de Barros - 765044
+#Gustavo Marchi de Barros - 765044
 
 
 N = 1
